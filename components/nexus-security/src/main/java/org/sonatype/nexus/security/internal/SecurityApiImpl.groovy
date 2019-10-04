@@ -101,7 +101,6 @@ class SecurityApiImpl
     securitySystem.updateUser(user)
   }
     
-  @Override
   User appendUserRoles(final String userId, final List<String> roleIds) {
       User user = securitySystem.getUser(userId, DEFAULT_SOURCE)
       user.roles = roleIds.collect{ new RoleIdentifier(DEFAULT_SOURCE, it)} // maybe it's this that needs to change?
