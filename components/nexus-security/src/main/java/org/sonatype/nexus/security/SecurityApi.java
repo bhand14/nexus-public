@@ -51,4 +51,8 @@ public interface SecurityApi
    */
   User setUserRoles(String userId, List<String> roleIds);
   
+  /**
+  * Append Roles to a given User.
+  */
+  User appendUserRoles(String userId, List<String> roleIds);
 }
